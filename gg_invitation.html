@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up Form with PDF</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000;
+    }
+
+    .pdf-wrapper, .form-wrapper {
+      width: 60%;
+      max-width: 600px;
+      aspect-ratio: 8.5 / 11;
+      margin-top: 20px;
+    }
+
+    .pdf-viewer, .form-viewer {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .form-wrapper {
+      height: 1000px; /* Separate fixed height for the form */
+      aspect-ratio: auto;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- PDF Embed -->
+  <div class="pdf-wrapper">
+    <iframe 
+      class="pdf-viewer"
+      src="https://drive.google.com/file/d/1EnXH472wbfC2b1_MblLtQt-U9BtyndvG/preview"
+      allow="autoplay">
+    </iframe>
+  </div>
+
+  <!-- Google Form Embed -->
+  <div class="form-wrapper">
+    <iframe 
+      class="form-viewer"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdnmARjEaymv_kkR1XxXoqPXfK2vbq9eW7WVOVu3m8KYBKgMQ/viewform?embedded=true">
+      Loading…
+    </iframe>
+  </div>
+</div>
+
+</body>
+</html>
